@@ -1,0 +1,19 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.dashboard-block {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.dashboard-block h4 {
+  margin-top: 0;
+  font-weight: bold; /* Make header texts bold */
+}
+
+.dashboard-block p {
+  margin: 0; /* Remove default margin */
+}

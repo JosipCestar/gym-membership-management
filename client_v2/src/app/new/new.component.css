@@ -1,0 +1,75 @@
+:host > :not(:first-child) {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+form {
+    max-width: 50%; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+}
+
+form > input,
+form > textarea {
+    width: 100%; /* Set input and textarea to 100% width */
+    margin-bottom: 10px;
+    border: 1px solid rgb(120, 150, 150);
+    font-family: "Inter", sans-serif;
+}
+
+form > input:focus,
+form > textarea:focus {
+    outline: none !important;
+    border: 1px solid rgb(46, 58, 58);
+}
+
+form > button {
+    background: white;
+    border: 3px solid #1b7c99;
+    color: #1b7c99;
+    cursor: pointer;
+    max-width: 25%; /* Limit button width */
+    height: 36px;
+}
+
+form > button:hover {
+    background: #1b7c99;
+    color: white;
+}
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%; /* Make the input and select elements fill their container */
+  padding: 12px; /* Increase padding for larger size */
+  margin-bottom: 10px; /* Add bottom margin */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px; /* Increase font size for larger size */
+}
+
+option {
+  font-family: "Inter", sans-serif; /* Apply font family to options */
+  font-size: 16px; /* Increase font size for options */
+}
+
+
+.center-text {
+    text-align: center;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .center-button {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  

@@ -1,0 +1,28 @@
+<h3 class="bold-text">Search Users</h3>
+<input
+  type="text"
+  placeholder="Search by PIN or Name"
+  [(ngModel)]="searchQuery"
+  (input)="onSearch()"
+  class="search-input" 
+/>
+
+<ul *ngIf="filteredUsers.length > 0">
+  <li *ngFor="let user of filteredUsers">
+    <div [ngClass]="{'active-user-container': isUserActive(user.date), 'expired-user-container': !isUserActive(user.date)}">
+      <h4><span class="bold-text">PIN:</span> {{ user.PIN }}</h4>
+      <h4><span class="bold-text">{{ user.name }} {{ user.surname }}</span></h4>
+      <p><span class="bold-text">Email:</span> {{ user.email }}</p>
+      <p><span class="bold-text">Plan:</span> {{ user.plan }}</p>
+      <p><span class="bold-text">Phone:</span> {{ user.phone_number }}</p>
+      <p><span class="bold-text">Expires:</span> {{ user.date | date:'dd.MM.yyyy' }}</p>
+
+      <p [ngClass]="{'active-status': isUserActive(user.date), 'expired-status': !isUserActive(user.date)}">Status: {{ isUserActive(user.date) ? 'Active' : 'Expired' }}</p>
+      <button (click)="renewUser(user)" class="action-button">Renew</button>
+      <button (click)="deleteUser(user)" class="action-button">Delete</button>
+    </div>
+  </li>
+</ul>
+
+
+<p *ngIf="filteredUsers.length === 0">No users found</p>

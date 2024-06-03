@@ -1,0 +1,40 @@
+header {
+    height: 50px;
+    background: white; /* Change background to white */
+    border-bottom: 2px solid #1b7c99; /* Add bottom border */
+}
+
+header > nav {
+    display: flex;
+    height: 100%;
+}
+
+header > nav > div,
+header > nav > ul > li {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > nav > ul {
+    display: flex;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #1b7c99; /* Change text color to teal */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+a:hover,
+a.active {
+    color: white; /* Change text color on hover and active state to white */
+    background: #1b7c99; /* Change background color on hover and active state to teal */
+}

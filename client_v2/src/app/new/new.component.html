@@ -1,0 +1,38 @@
+<h3 class="center-text">Enroll User</h3>
+
+<form [formGroup]="form" (ngSubmit)="createUser()" class="form-container">
+  <input formControlName="name" type="text" placeholder="Name">
+  <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    <small>Name is required.</small>
+  </div>
+
+  <input formControlName="surname" type="text" placeholder="Surname">
+  <div *ngIf="form.get('surname')?.invalid && form.get('surname')?.touched">
+    <small>Surname is required.</small>
+  </div>
+
+  <input formControlName="email" type="email" placeholder="Email">
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+    <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format.</small>
+  </div>
+
+  <select formControlName="plan">
+    <option value="Standard">Standard</option>
+    <option value="Premium">Premium</option>
+  </select>
+
+  <input formControlName="phone_number" type="text" placeholder="Phone Number">
+  <div *ngIf="form.get('phone_number')?.invalid && form.get('phone_number')?.touched">
+    <small *ngIf="form.get('phone_number')?.errors?.['required']">Phone number is required.</small>
+    <small *ngIf="form.get('phone_number')?.errors?.['pattern']">Invalid phone number format. Must be 10 digits.</small>
+  </div>
+
+  <input formControlName="pin" type="text" placeholder="PIN">
+  <div *ngIf="form.get('pin')?.invalid && form.get('pin')?.touched">
+    <small *ngIf="form.get('pin')?.errors?.['required']">PIN is required.</small>
+    <small *ngIf="form.get('pin')?.errors?.['pattern']">Invalid PIN format. Must be 4 digits.</small>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid" class="center-button">Submit</button>
+</form>

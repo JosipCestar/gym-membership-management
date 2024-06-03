@@ -1,0 +1,82 @@
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.search-input {
+  width: 300px; /* Adjust the width as needed */
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+h4 {
+  
+  margin: 10px 0; /* Adjust spacing between paragraphs */
+}
+p {
+  margin: 10px 0; /* Adjust spacing between paragraphs */
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+h3.bold-text {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Add margin-bottom */
+  font-weight: bold;
+}
+
+.active-user-container {
+  margin-bottom: 20px; /* Adjust spacing between user information */
+}
+
+.expired-user-container {
+  margin: 10px 0; /* Adjust spacing between paragraphs */
+  margin-bottom: 20px; /* Adjust spacing between user information */
+}
+
+.active-user-container p.active-status {
+  color: green; /* Make status text green */
+  font-weight: bold;
+  margin: 10px 0; /* Adjust spacing between paragraphs */
+}
+.bold-text h3 {
+  font-weight: bold;
+  font-size: 100px;
+}
+.bold-text {
+  font-weight: bold;
+}
+
+
+.expired-user-container p.expired-status {
+  color: red; /* Make status text red */
+  font-weight: bold;
+  margin: 10px 0; /* Adjust spacing between paragraphs */
+}
+.action-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1b7c99; /* Blue color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}

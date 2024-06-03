@@ -1,0 +1,16 @@
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    flex: 0 0 auto;
+  }
+  
+  .modal-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  

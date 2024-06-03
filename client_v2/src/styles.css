@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;
+    background: rgb(237, 241, 241);
+    min-width: 576px;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Use min-height instead of height */
+    font-family: "Inter";
+}
+
+.container {
+    flex: 1; /* Allow the container to grow to fill the available space */
+    margin: 0 100px;
+    background: white;
+    padding: 30px;
+}
